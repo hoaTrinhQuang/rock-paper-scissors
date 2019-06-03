@@ -9,12 +9,14 @@ var cpuPoint = 0;
 
 youChoice.onclick = function(event) {
     let yourChoice = getYouChoice(event.target.name);
+    
+    if (!isNaN(yourChoice)) {
     let cpuChoice = getCpuChoice(1, 3);
     clearAll();
     displayScore(yourChoice, cpuChoice);
     displayYour(yourChoice);
     displayCpu(cpuChoice);
-
+    }    
 }
 
 function getYouChoice(choice) {
